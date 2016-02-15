@@ -15,5 +15,6 @@ $(document).ready(function() {
   var addToLog = function(txt) {
     $(".logs").append("<br>" + txt);
   }
+  console.log('boo');
 
 });
