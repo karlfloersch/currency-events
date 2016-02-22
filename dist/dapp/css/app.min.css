@@ -1,5 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
-div {
-  margin: 15px;
+body {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+
+  width: 100%;
 }
 
+div {
+}
+
+.white { 
+  color: #fff;
+}
+
+.nav-icon {
+  font-size: 30px;
+}
+
+
+.mui-appbar button {
+  margin: 0;
+  margin-left: 15px;
+  height: 65px;
+}
+
+#container {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+/* Article Stuff */
+.article {
+  padding: 0px;
+}
+.article button{
+  margin: 0px !important;
+  height: 65px;
+  background-color: #fff;
+  color: #2196F3;
+}
+.article button .active {
+  background-color: #39a1f4;
+  color: #FFF336;
+}
+.article .headline {
+  padding-left: 10px;
+  font-size: 20px;
+}
+.article .headline a {
+  text-decoration: none;
+  color: #000;
+}
+.article .score {
+  padding: 12px;
+  font-size: 30px;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+
+/* Reclaim Stuff */
+.deposit {
+  width: 40%;
+  padding: 0px;
+  height: 300px;
+}
+.deposit button{
+  margin: 0px !important;
+  height: 65px;
+  background-color: #fff;
+  color: #2196F3;
+}
+.deposit .reclaim-date {
+  padding-left: 30px;
+  font-size: 45px;
+}
+.deposit .value {
+  font-size: 45px;
+  padding-left: 30px;
+}
+}

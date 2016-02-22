@@ -1,33 +1,87 @@
 <html>
   <head>
     <title>Embark - SimpleStorage Demo</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- MUI -->
+    <link href="//cdn.muicss.com/mui-0.4.5/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.4.5/js/mui.min.js"></script>
+
     <link rel="stylesheet" href="css/app.min.css">
 
     <script src="js/app.min.js"></script>
+    <!-- JSPM -->
     <script src="js/jspm_packages/system.js"></script>
     <script src="js/config.js"></script>
     <script>
-      System.import('test.js')
+      System.import('main.js')
     </script>
-
-
-    <!-- <script src="js/app.min.js"></script> -->
   </head>
   <body>
-    <h3>Embark - SimpleStorage Demo</h3>
+    <div style="display:none"> sweep all this code under the couch for now --> <h3>Embark - SimpleStorage Demo</h3> <div> <input type="text" class="text" value="10"> <button class="set">Set Value</button> </div> <div> <button class="get">Get Value</button> <br>value is <span class="value"></span> </div> <div class="logs"> </div> </div>
 
-    <div>
-      <input type="text" class="text" value="10">
-      <button class="set">Set Value</button>
+
+
+  <div class="mui-appbar">
+    <!-- content -->
+    <td class="mui--appbar-height">
+      <button id="currency-events-btn" class="mui-btn mui-btn--primary">
+        <i class="fa fa-newspaper-o"></i> Currency Events
+      </button>
+      <button id="home-btn" class="mui-btn mui-btn--primary">
+        <i class="fa fa-home white nav-icon"></i>
+      </button>
+      <button id="reclaim-btn" class="mui-btn mui-btn--primary">
+        <i class="fa fa-diamond white nav-icon"></i>
+      </button>
+    </td>
+  </div>
+
+
+  <script id="article-template" type="text/x-handlebars-template">
+    <div class="mui-panel article" id="{{id}}">
+      <button id="{{id}}-thumbs-up" class="mui-btn mui-btn--primary">
+        <i class="fa fa-thumbs-up nav-icon"></i>
+      </button>
+      <button id="{{id}}-thumbs-down"class="mui-btn mui-btn--primary">
+        <i class="fa fa-thumbs-down nav-icon"></i>
+      </button>
+      <span id="{{id}}-headline" class="headline"><a href="{{url}}">{{headline}}</a></span>
+      <span id="{{id}}-score" class="mui--pull-right score">{{score}}</span>
     </div>
+  </script>
 
-    <div>
-      <button class="get">Get Value</button>
-      <br>value is <span class="value"></span>
+
+  <script id="deposit-template" type="text/x-handlebars-template">
+    <div class="mui-panel deposit" id="{{id}}" style="float:left">
+      <button id="{{id}}-reclaim-btn" class="mui-btn mui-btn--primary">
+        <i class="fa fa-money nav-icon"></i> Reclaim Your Deposit
+      </button>
+      <div class="reclaim-date">
+        {{date1}}
+      </div>
+      <div class="value">
+        {{value1}} WEI
+      </div>
     </div>
-
-    <div class="logs">
+    <div class="mui-panel deposit" id="{{id}}" style="float:right">
+      <button id="{{id}}-reclaim-btn" class="mui-btn mui-btn--primary">
+        <i class="fa fa-money nav-icon"></i> Reclaim Your Deposit
+      </button>
+      <div class="reclaim-date">
+        {{date2}}
+      </div>
+      <div class="value">
+        {{value2}} WEI
+      </div>
     </div>
+  </script>
 
+
+
+
+    <div id="container">
+      <h1>Loading</h1>
+    </div>
   </body>
 </html>
